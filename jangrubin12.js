@@ -21,16 +21,28 @@ class Calculator {
         this._b = b; 
     }
 
-addCalculator() {
+add() {
     let result = this._a + this._b;
     return result;
  }
 
-minusCalculator() {
+minus() {
     let result = this._a - this._b;
+    return result;
+}
+
+divide() {
+    let result = this._a / this._b;
+    return result;
+}
+
+multiply() {
+    let result = this._a * this._b;
     return result;
 }
 }
 const calculator = new Calculator(a,b);
-console.log(calculator.addCalculator());
-console.log(calculator.minusCalculator())
+console.log(calculator.add());
+console.log(calculator.minus());
+console.log(calculator.divide());
+console.log(calculator.multiply())
