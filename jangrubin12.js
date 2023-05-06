@@ -1,15 +1,15 @@
-const add = require('./utility-module/add.js');
-const minus = require('./utility-module/minus.js');
-const divide = require('./utility-module/divide.js');
-const multiply = require('./utility-module/multiply.js');
+// const add = require('./utility-module/add.js');
+// const minus = require('./utility-module/minus.js');
+// const divide = require('./utility-module/divide.js');
+// const multiply = require('./utility-module/multiply.js');
 
 const a = 10;
 const b = 20;
 
-console.log(add(a,b));
-console.log(minus(a,b));
-console.log(divide(a,b));
-console.log(multiply(a,b));
+// console.log(add(a,b));
+// console.log(minus(a,b));
+// console.log(divide(a,b));
+// console.log(multiply(a,b));
 
 // Q1. 사칙연산 모듈 4개를 만들어서 import 후 호출 한 예시다.
 // Q1. 아무래도 하나하나 가져오는 것은 가독성, 사용성이 떨어진다.
@@ -20,4 +20,11 @@ class Calculator {
         this._a = a;
         this._b = b; 
     }
+
+addCalculator() {
+    let result = this._a + this._b;
+    return result;
+ }
 }
+const calculator = new Calculator(a,b);
+console.log(calculator.addCalculator())
