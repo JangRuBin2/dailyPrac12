@@ -3,7 +3,7 @@
 // const divide = require('./utility-module/divide.js');
 // const multiply = require('./utility-module/multiply.js');
 
-const a = 10;
+const a = 10.123132;
 const b = 20;
 
 // console.log(add(a,b));
@@ -20,6 +20,10 @@ class Calculator {
         this._a = a;
         this._b = b; 
     }
+help() {
+    // return typeof(this._a)
+    return parseInt(this._a);
+}
 
 add() {
     let result = this._a + this._b;
@@ -42,11 +46,12 @@ multiply() {
 }
 }
 const calculator = new Calculator(a,b);
+console.log(calculator.help())
 console.log(calculator.add());
 console.log(calculator.minus());
 console.log(calculator.divide());
 console.log(calculator.multiply());
-
+// console.log(calculator.help());
 // Q2. Class에서 작성 될 메서드는 모두 '정수'로 된 두개의
 // 인자를 받아서 결과를 반환하게 제한하려면
 // 어떤 helper function을 사용해야 할까요?
