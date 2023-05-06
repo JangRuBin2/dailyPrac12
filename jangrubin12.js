@@ -11,3 +11,13 @@ console.log(minus(a,b));
 console.log(divide(a,b));
 console.log(multiply(a,b));
 
+// Q1. 사칙연산 모듈 4개를 만들어서 import 후 호출 한 예시다.
+// Q1. 아무래도 하나하나 가져오는 것은 가독성, 사용성이 떨어진다.
+// Q1. 이것을 하나의 Class 형태의 모듈로 만들어 관리 할 수 있을까?
+
+class Calculator {
+    constructor(a,b) {
+        this._a = a;
+        this._b = b; 
+    }
+}
