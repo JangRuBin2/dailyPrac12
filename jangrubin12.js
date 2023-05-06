@@ -25,6 +25,12 @@ addCalculator() {
     let result = this._a + this._b;
     return result;
  }
+
+minusCalculator() {
+    let result = this._a - this._b;
+    return result;
+}
 }
 const calculator = new Calculator(a,b);
-console.log(calculator.addCalculator())
+console.log(calculator.addCalculator());
+console.log(calculator.minusCalculator())
