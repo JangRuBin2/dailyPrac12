@@ -45,4 +45,11 @@ const calculator = new Calculator(a,b);
 console.log(calculator.add());
 console.log(calculator.minus());
 console.log(calculator.divide());
-console.log(calculator.multiply())
+console.log(calculator.multiply());
+
+// Q2. Class에서 작성 될 메서드는 모두 '정수'로 된 두개의
+// 인자를 받아서 결과를 반환하게 제한하려면
+// 어떤 helper function을 사용해야 할까요?
+// helper function을 사용하면 어떤 장점이 있을까요
+// 버그 해결 및 방지 가능할 것 같습니다
+// helper function을 사용하지 않고 구현할 수 있는 방법이 있을까요?
