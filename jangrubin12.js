@@ -3,7 +3,7 @@
 // const divide = require('./utility-module/divide.js');
 // const multiply = require('./utility-module/multiply.js');
 
-const a = 10.123132;
+const a = 10;
 const b = 20;
 
 // console.log(add(a,b));
@@ -17,13 +17,23 @@ const b = 20;
 
 class Calculator {
     constructor(a,b) {
-        this._a = a;
-        this._b = b; 
+        // validataIntegers 메서드?? 값이 정수일 때만 값을 return해줌
+        // this._a = this.~~ 이부분이 이해가 가지 않음
+        this._a = this.validateIntegers(a);
+        this._b = this.validateIntegers(b);
     }
 help() {
-    return validateIntegers(this._a)
+    return typeof this._a;
     // return typeof(this._a)
     // return parseInt(this._a);
+}
+
+validateIntegers(value) {
+    if(Number.isInteger(value)) {
+        return value;
+    } else {
+        throw new Error("인자는 정수여야 합니다")
+    }
 }
 
 add() {
@@ -52,7 +62,7 @@ console.log(calculator.add());
 console.log(calculator.minus());
 console.log(calculator.divide());
 console.log(calculator.multiply());
-// console.log(calculator.help());
+console.log(calculator.help());
 // Q2. Class에서 작성 될 메서드는 모두 '정수'로 된 두개의
 // 인자를 받아서 결과를 반환하게 제한하려면
 // 어떤 helper function을 사용해야 할까요?
