@@ -21,8 +21,9 @@ class Calculator {
         this._b = b; 
     }
 help() {
+    return validateIntegers(this._a)
     // return typeof(this._a)
-    return parseInt(this._a);
+    // return parseInt(this._a);
 }
 
 add() {
